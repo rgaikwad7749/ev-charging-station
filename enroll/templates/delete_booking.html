@@ -1,0 +1,32 @@
+<!-- delete_booking.html -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style5.css' %}" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    {% comment %} <h1 style="text-align:center; color: aliceblue; background-color:black">BOOK CHARGING SLOTS </h1> {% endcomment %}
+    <h1 style="text-align:center; color: aliceblue; background-color:black">Delete Booking</h1>
+    <p style="text-align:center; color: aliceblue;">Are you sure you want to delete the booking?</p>
+    <form method="post">
+        {% csrf_token %}
+        <div class="container" style="text-align:center;">
+        <button class="btn btn-primary "  type="submit">Delete Booking</button>
+    </div>
+    </form>
+</body>
+
+<script src="{% static 'js/jquery.js' %}"></script>
+<script src="{% static 'js/popper.js' %}"></script>
+<script src="{% static 'js/bootstrap.js' %}"></script>
+{% if messages %}{% for message in messages %}<script>alert("{{ message }}");</script>{% endfor %}{% endif %}
+
+</html>

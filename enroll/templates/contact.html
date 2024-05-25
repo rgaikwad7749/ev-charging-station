@@ -1,0 +1,58 @@
+ 
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style6.css' %}" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-6 my-5">
+                <form  method='POST' action="">
+                    {% csrf_token %}
+                    <h1 style="text-align:center; background-color:black; color: aliceblue;"> Contacts And Query</h1>
+                    <div class="form-group">
+                        <label for="name">Name</label>&nbsp;&nbsp;
+                        <input type="text" class="form-control" name="name" required>
+                      </div><br>
+
+                      <div class="form-group">
+                        <label for="email">Email address</label>
+                        <input type="email" class="form-control" name="email" required>
+ 
+                      </div><br>
+                      <div class="form-group">
+                        <label for="phone">Phone no</label>
+                        <input type="text" class="form-control" name="phone" required>
+                      </div><br>
+                      <div class="form-group">
+                        <label for="desc">Query</label>
+                        <input type="text" class="form-control" name="desc" required>
+                      </div><br>
+                    <div class="mb-3 form-check">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                    </div>
+                    <div class="d-grid gap-2">
+                        <button class="btn btn-primary" type="submit">submit</button>
+                      </div>
+                  </form>
+
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+    </div>
+
+
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/popper.js' %}"></script>
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+</body>
+</html>

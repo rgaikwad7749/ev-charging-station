@@ -1,0 +1,23 @@
+body{
+    /* background: url('/static/images/mn.jpg') no-repeat top fixed; width:100%; height:100vh; */
+    background-size: cover;
+    position: relative;
+}
+h1{
+    color: blue;
+    
+}
+
+.nn{
+    width: 35%;
+  
+
+
+}
+
+
+*{
+    color:bllack;
+    font-size:small;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}

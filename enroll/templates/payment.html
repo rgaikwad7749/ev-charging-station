@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style8.css' %}" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row my-5">
+            <div class="col-6">
+                <img src="{% static 'assets/img/gn.png' %}" class="img-fluid" alt="">
+            </div>
+            <div class="col-6 my-5 mx-5 nn">
+     
+     
+
+                <h1 style="text-align:center; color: aliceblue; background-color:black">Payment </h1>
+                <form method="POST">
+                    {% csrf_token %}
+                   
+                   
+                    
+                       
+                            <div class="mb-3">
+                                <label for="dname" class="form-label">Account Holder Name </label>
+                                <input type="text" class="form-control" name="hname">
+                            </div> 
+                        
+                            <div class="mb-3">
+                                <label for="dname" class="form-label">Account No: </label>
+                                <input type="text" class="form-control" name="accountno">
+                            </div> 
+                        
+
+                    
+                            <div class="mb-3">
+                                <label for="dname" class="form-label">IFSC Code</label>
+                                <input type="text" class="form-control" name="ifsccode">
+                            </div>
+                            
+                      
+                      
+                            <div class="mb-3">
+                                <label for="dname" class="form-label">total amount</label>
+                                <input type="text" class="form-control" name="total">
+                            </div>
+                            
+                        
+                    
+                    
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                    </div>
+                    <div class="d-grid gap-2">
+                        <button class="btn btn-primary" type="submit">submit</button>
+                      </div>
+                </form>
+            
+            
+        </div>   </div>
+    </div>
+
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/popper.js' %}"></script>
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+</body>
+
+</html>
+
+

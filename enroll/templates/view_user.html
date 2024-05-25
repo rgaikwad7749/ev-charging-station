@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style9.css' %}" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container my-5" style="border: 5px solid;">
+        <h1 style="text-align:center;"> All login Users</h1>
+    <table class="table table-hover ">
+
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col"> username</th>
+            <th scope="col">first name</th>
+            <th scope="col">last name</th>
+            <th scope="col">Email</th>
+            <!-- <th scope="col">pass1</th>
+            <th scope="col">pass2</th>
+          </tr> -->
+        </thead>
+        <tbody>
+          {% for fm in forms  %}
+            <th scope="row">{{forloop.counter}}</th>
+            <td colspan="">{{fm.Username}}</td>
+            <td colspan="">{{fm.fname}}</td>
+            <td colspan="">{{fm.lname}}</td>
+            <td colspan="">{{fm.email}}</td>
+            <!-- <td colspan="">{{fm.pass1}}</td>
+            <td colspan="">{{fm.pass2}}</td> -->
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+
+    </div>
+    <script src="{% static 'js/jquery.js' %}"></script>
+  <script src="{% static 'js/popper.js' %}"></script>
+  <script src="{% static 'js/bootstrap.js' %}"></script>
+</body>
+</html>

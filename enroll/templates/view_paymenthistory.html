@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="text-align:center; color: aliceblue; background-color:black">BOOK SLOTS </h1>
+    <div class="container">
+      {% if  forms %}
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col"> Account holder name</th>
+            <th scope="col">Account no</th>
+           
+            <th scope="col">IFSC code</th>
+            <th scope="col">Total Amount</th>
+          
+          </tr>
+        </thead>
+        <tbody>
+            {% for fm in forms  %}
+          <tr>
+            <th scope="row">{{forloop.counter}}</th>
+            <td colspan="">{{fm.hname}}</td>
+            <td colspan="">{{fm.accountno}}</td>
+            <td colspan="">{{fm.ifsccode}}</td>
+            
+            <td colspan="">{{fm.total}}</td>
+            
+             
+            
+             
+          </tr>
+          {% endfor %}</tbody></table>{% endif %}
+    </div></div>
+    <script src="{% static 'js/jquery.js' %}"></script>
+  <script src="{% static 'js/popper.js' %}"></script>
+  <script src="{% static 'js/bootstrap.js' %}"></script>
+</body>
+</html>

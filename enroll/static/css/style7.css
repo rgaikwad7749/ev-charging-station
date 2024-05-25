@@ -1,0 +1,31 @@
+{% load static %}
+body{
+    
+    background: url('/static/images/kk.jpg') no-repeat top fixed;  
+    background-size: 100%;
+
+
+}
+.container{
+    width: 30%;
+  
+    margin-top: 20vh;
+    border:0px solid #fff; padding:30px 40px;
+    -webkit-box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75);
+-moz-box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75);
+box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75) ;
+
+
+}
+*{
+    color:white;
+}
+.bi{
+    margin-right: 20%;
+}
+
+
+@media screen and (min-width: 480px) {
+    body {
+    }
+  }

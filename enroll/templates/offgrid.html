@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="text-align:center; color: aliceblue; background-color:black">Views SLOTS </h1>
+    <div class="container">
+      {% if  forms %}
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col"> Slots name</th>
+            <th scope="col">Address</th>
+           
+            <th scope="col">Area</th>
+            <!-- <th scope="col">Socket</th> -->
+            <th scope="col">City</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for fm in forms  %}
+          <tr>
+            <th scope="row">{{forloop.counter}}</th>
+            <td colspan="">{{fm.sname}}</td>
+            <td colspan="">{{fm.address}}</td>
+            <td colspan="">{{fm.area}}</td>
+            <!-- <td colspan="">{{fm.socket}}</td> -->
+            <td colspan="">{{fm.city}}</td>
+            
+            <td colspan=""><a href="{% url 'book_slots' %}" class="btn btn-primary" type="submit">Book Slots</a>  </td>            
+           
+             
+          </tr>
+          {% endfor %}</tbody></table>{% endif %}
+    </div></div>
+    <script src="{% static 'js/jquery.js' %}"></script>
+  <script src="{% static 'js/popper.js' %}"></script>
+  <script src="{% static 'js/bootstrap.js' %}"></script>
+</body>
+</html>

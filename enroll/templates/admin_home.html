@@ -1,0 +1,86 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+  <link href="{% static 'css/style11.css' %}" rel="stylesheet">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div class="container-fluid bg-dark">
+    <!-- <img src="{% static 'images/th.jpg' %}" alt="ambulance"> -->
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg ">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Admin panel</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="justify-content-end mx-5">
+          <div class="collapse navbar-collapse " id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+              <li class="nav-item mx-2">
+                <a class="nav-link active" aria-current="page" href="">Home</a>
+              </li>
+              <li class="nav-item mx-1">
+                <a class="nav-link" href="{% url 'view_user' %}">View User</a>
+              </li>
+              <li class="nav-item mx-1">
+                <a class="nav-link" href="{% url 'user_cancelbooking' %}">View USer Cancel Bookings</a>
+              </li>
+              {% comment %} <li class="nav-item mx-1">
+                <a class="nav-link" href="{% url 'add_stations' %}">Add Stations</a>
+              </li> {% endcomment %}
+              
+              <li class="nav-item mx-1">
+                <a class="nav-link" href="">Detailes Contact Us</a>
+              </li>
+              <li class="nav-item mx-1">
+                <a class="nav-link" href="{% url 'view_slots' %}">View Slots</a>
+              </li>
+              <li class="nav-item mx-1">
+                <a class="nav-link" href="{% url 'view_booking' %}">View Booking History</a>
+              </li>
+              <li class="nav-item mx-1">
+                <a class="nav-link" href="{% url 'view_paymenthistory' %}">View Payment history</a>
+              </li>
+              <li class="nav-item mx-1">
+                <a class="nav-link" href="{% url 'admin_logout' %}">logout</a>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <!-- <a class="btn btn-primary" href="" role="button">Logout</a> -->
+
+  <script src="{% static 'js/jquery.js' %}"></script>
+  <script src="{% static 'js/popper.js' %}"></script>
+  <script src="{% static 'js/bootstrap.js' %}"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <!-- {% for message in messages %} 
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+      {{message}}
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    
+  {% endfor %} -->
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  {% comment %} <script>  
+    {% for message in messages %}
+    swal("{{message}}");
+    {% endfor %}
+  </script> {% endcomment %}
+
+  {% if messages %}{% for message in messages %}<script>alert("{{ message }}");</script>{% endfor %}{% endif %}
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+  <link href="{% static 'css/style1.css' %}" rel="stylesheet">
+  <title>Document</title>
+</head>
+<body>
+    {% if messages %}{% for message in messages %}<script>alert("{{ message }}");</script>{% endfor %}{% endif %}
+  <div class="row">
+    
+    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+  <div class="container" >
+    
+  <form method="POST">
+    {% csrf_token %}
+      <h1> Login Form</h1>
+      
+      <div class="mb-3">
+        <label for="username" class="form-label">Username</label>
+        <input type="text" class="form-control" id="Username" name="Username" ria-describedby="username">
+  
+      </div>
+      <div class="mb-3">
+        <label for="pass1" class="form-label">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1" name="pass1">
+      </div>
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+      </div>
+      <div class="d-grid gap-2">
+        <button class="btn btn-success" type="submit">login</button>
+      </div>
+      <a href="{% url 'owner_registrations' %}" class="btn-btn-success">register here</a>
+    </form>
+  </div>
+</div>
+</div>  
+  <script src="{% static 'js/jquery.js' %}"></script>
+  <script src="{% static 'js/popper.js' %}"></script>
+  <script src="{% static 'js/bootstrap.js' %}"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <!-- <script>
+    {% for message in messages %}
+  swal("   {{message}}");
+  
+  {% endfor %}
+</script> -->
+ 
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

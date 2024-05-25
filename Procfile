@@ -1,0 +1,1 @@
+web: gunicorn Evehicle.wsgi --log-file--

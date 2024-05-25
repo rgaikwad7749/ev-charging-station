@@ -1,0 +1,8 @@
+body{
+    background: url('/static/images/jmk.jpg') no-repeat top fixed; width:100%; height:100%;
+    background-size: 100%;
+}
+h1{
+    color: blue;
+    
+}

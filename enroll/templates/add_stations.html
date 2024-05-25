@@ -1,0 +1,84 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style5.css' %}" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 style="text-align:center; color: aliceblue; background-color:black">ADD CHARGING SLOTS </h1>
+
+        <div class="row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-6">
+                <form method="POST">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <label for="hname" class="form-label">Slots Owner Name</label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" name="sname">
+                    </div>
+                    <div class="mb-3">
+                        <label for="address" class="form-label">Address</label>
+                        <input type="text" class="form-control" name="address">
+                    </div>
+                    <div class="mb-3">
+                        <label for="address" class="form-label">Area</label>
+                        <input type="text" class="form-control" name="area">
+                    </div>
+                    <div class="mb-3">
+                        <label for="ambulance_no" class="form-label">City</label>
+                        <input type="text" class="form-control" name="city">
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                    <div class="mb-3">
+                        <label for="ambulance_no" class="form-label">Details</label>
+                        <input type="text" class="form-control" name="details">
+                    </div></div>
+                    <div class="col-6">
+                    <div class="mb-3">
+                        <label for="ambulance_no" class="form-label">Add Location Path</label>
+                        <input type="text" class="form-control" name="Location">
+                    </div></div></div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="mb-3">
+                                <label for="dname" class="form-label">Mobile No</label>
+                                <input type="text" class="form-control" name="phone">
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="mb-3">
+                                <label for="dno" class="form-label">Total Slot</label>
+                                <input type="dno" class="form-control" id="exampleInputPassword1" name="ctslot">
+                            </div>
+                        </div>
+                    </div>
+                    
+                   
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                    </div>
+                    <div class="d-grid gap-2">
+                        <button class="btn btn-primary" type="submit">submit</button>
+                      </div>
+                </form>
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+    </div>
+
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/popper.js' %}"></script>
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+</body>
+
+</html>

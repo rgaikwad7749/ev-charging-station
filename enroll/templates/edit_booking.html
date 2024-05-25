@@ -1,0 +1,128 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+    <!-- <link href="{% static 'css/style5.css' %}" rel="stylesheet"> -->
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container my-5">
+     <div class="row">
+        <div class="col-3"></div>
+        <div class="col-6">
+            <h1 style="text-align:center; color: aliceblue; background-color:black">Cancel Booking Slot </h1>
+
+       
+            <form method="POST">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="hname" class="form-label"> Name</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" name="oname" value="{{booking.oname}}">
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="mb-3">
+                            <label for="address" class="form-label">Vehicle Number</label>
+                            <input type="text" class="form-control" name="vehicleno" value="{{booking.vehicleno}}">
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="mb-3">
+                            <label for="address" class="form-label">Mobile No</label>
+                            <input type="text" class="form-control" name="mobileno" value="{{booking.mobileno}}">
+                        </div>
+                    </div>
+                </div>
+               
+                
+                <div class="row">
+                    <div class="col-6"> <div class="mb-3">
+                        <label for="ambulance_no" class="form-label">City</label>
+                        <input type="text" class="form-control" name="city" value="{{booking.city}}">
+                    </div>
+                </div>
+                    <div class="col-6">
+                        <div class="mb-3">
+                            <label for="dname" class="form-label">area</label>
+                            <input type="text" class="form-control" name="area" value="{{booking.area}}">
+                        </div>
+                    </div>
+                </div>
+              <div class="row">
+                <div class="col-6"> <div class="mb-3">
+                    <label for="appt" class="form-label">Select a time:</label>
+                    <input type="time" id="appt" class="form-control"  name="time" value="{{booking.time}}">
+                </div>
+            </div>
+                <div class="col-6">
+                    <div class="mb-3">
+                        <label for="appt" class="form-label">Select a Date:</label>
+                        <input type="date" id="appt" class="form-control"  name="date" value="{{booking.date}}">
+                    </div>
+                </div>
+
+              </div>
+              <h1 style="text-align:center; color: aliceblue; background-color:black">Refund the Payment </h1>
+               <div class="row">
+                <div class="col-6">
+                    <div class="mb-3">
+                        <label for="dname" class="form-label">Account Holder Name </label>
+                        <input type="text" class="form-control" name="hname" value="{{booking.hname}}">
+                    </div> 
+                </div>
+                <div class="col-6">
+                    <div class="mb-3">
+                        <label for="dname" class="form-label">Account No: </label>
+                        <input type="text" class="form-control" name="accountno" value= "{{booking.accountno}}">
+                    </div> 
+                </div>
+               </div>
+               <div class="row">
+                <div class="col-6">
+                    <div class="mb-3">
+                        <label for="dname" class="form-label">IFSC Code</label>
+                        <input type="text" class="form-control" name="ifsccode" value="{{booking.ifsccode}}">
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="mb-3">
+                        <label for="dname" class="form-label">total amount</label>
+                        <input type="text" class="form-control" name="total" value="{{booking.total}}">
+                    </div>
+                </div>
+               </div>
+              
+                
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-primary" type="submit">Confirm Refund </button>
+                  </div>
+            </form>
+       
+</div>
+</div>
+        </div>
+        <div class="col-3"></div>
+     </div>
+     
+      
+</div>
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/popper.js' %}"></script>
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+    {% if messages %}{% for message in messages %}<script>alert("{{ message }}");</script>{% endfor %}{% endif %}
+</body>
+
+</html>
+
+
+ 
